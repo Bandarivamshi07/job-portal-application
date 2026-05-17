@@ -21,8 +21,11 @@ await connectCloudinary()
 // Middleware
 
 app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
+  origin: [
+  "http://localhost:5173",
+  "https://your-vercel-url.vercel.app"
+],
+credentials: true
 }))
 app.post(
   '/webhooks',
